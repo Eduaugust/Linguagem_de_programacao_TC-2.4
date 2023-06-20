@@ -1,5 +1,13 @@
-public class Circle {
+import util.Shape;
+
+public class Circle extends Shape {
     private double radius;
+
+    public Circle(String color, boolean filled, double radius) {
+        super(color, filled);
+        this.radius = radius;
+    }
+
 
     public double getRadius() {
         return radius;
@@ -9,8 +17,8 @@ public class Circle {
         this.radius = radius;
     }
 
-    public Circle(double radius) {
-        this.radius = radius;
+    public double getPerimeter() {
+        return Math.PI * 2 * getRadius();
     }
 
     public double getArea() {
@@ -18,6 +26,6 @@ public class Circle {
     }
 
     public String toString() {
-        return "Circle [radius=" + radius + "]";
+        return super.toString() + "Radius: " + Double.toString(radius);
     }
 }

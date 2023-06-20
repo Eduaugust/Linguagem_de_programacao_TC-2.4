@@ -33,14 +33,21 @@ public class Shape {
         return 0;
     }
 
+    public String showInfo(Shape s) {
+        System.out.println("\nRodando showInfo:\n");
+        return s.toString();
+
+    }
+
     public String toString() {
         String resposta = "";
         if (isFilled()) {
-            resposta = "Preenchido: Sim"; 
+            resposta = "Preenchido: Sim\nCor: "; 
+            resposta += getColor();
+            resposta += "\n";
         } else {
-            resposta = "Preenchido: Não"; 
+            resposta = "Preenchido: Não\n"; 
         }
-        resposta += getColor();
 
         return resposta;
     }
