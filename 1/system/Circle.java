@@ -5,7 +5,7 @@ public class Circle extends Shape {
 
     public Circle(String color, boolean filled, double radius) {
         super(color, filled);
-        this.radius = radius;
+        setRadius(radius);
     }
 
 

@@ -7,8 +7,8 @@ public class Rectangle extends Shape {
 
     public Rectangle(String color, boolean filled, double width, double height) {
         super(color, filled);
-        this.width = width;
-        this.height = height;
+        setWidth(width);
+        setHeight(height);
     }
 
     public void setWidth(double width) {
